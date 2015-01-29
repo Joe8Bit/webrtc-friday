@@ -14,6 +14,9 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
+		<script src="//use.typekit.net/ooi5xxk.js"></script>
+		<script>try{Typekit.load();}catch(e){}</script>
+
 		<link rel="stylesheet" href="css/reveal.min.css">
 		<link rel="stylesheet" href="css/theme/joep.css" id="theme">
 
@@ -42,13 +45,7 @@
 				<section id="intro" data-transition="zoom" data-background-transition="zoom" class="listing">
 					<h1>WebRTC</h1>
 					<h3>Audio, Video, Data, OH MY! </h3>
-					<hr>
-					<h3 class="fade"><small>Friday 30th of Jan 2015<br>Joe Pettersson<br><a href="https://github.com/Joe8Bit/webrtc-friday">https://github.com/Joe8Bit/webrtc-friday</a></small></h4>
-				</section>
-
-				<section data-transition="zoom" data-background-transition="zoom" class="listing">
-					<h1>Joe Pettersson</h1>
-					<h3><a href="https://twitter.com/Joe8bit">@Joe8Bit</a> | <a href="https://github.com/Joe8Bit">github.com/Joe8Bit</a></h3>
+					<h3 class="fade"><small>Friday 30th of Jan 2015 | <a href="https://github.com/Joe8Bit/webrtc-friday">https://github.com/Joe8Bit/webrtc-friday</a></small></h4>
 				</section>
 
 				<section class="listing">
@@ -57,8 +54,11 @@
 				</section>
 
 				<section class="listing">
-					<p>WebRTC is a new front in the long war for an open and unencumbered web</p>
-					<p><small>Brendan Eich – Mozilla CTO and inventor of JavaScript</small></p>
+					<blockquote>
+						WebRTC is a new front in the long war for an open and unencumbered web
+						<small class="attribution">Brendan Eich – Mozilla CTO and creator of JavaScript</small>
+					</blockquote>
+					<p></p>
 				</section>
 
 				<section class="listing">
@@ -71,7 +71,6 @@
 
 				<section class="listing">
 					<h1>The WebRTC APIs</h1>
-					<hr>
 				</section>
 
 				<section class="listing">
@@ -80,11 +79,6 @@
 						<li>Communicating audio and video = RTCPeerConnection</li>
 						<li>Communicating arbitrary data = RTCDataChannel</li>
 					</ul>
-				</section>
-
-				<section class="listing">
-					<h1>MediaStream</h1>
-					<hr>
 				</section>
 
 				<section class="listing">
@@ -176,15 +170,10 @@ navigator.webkitGetUserMedia(constraints, gotStream);
     				<a href="https://html5-demos.appspot.com/static/getusermedia/screenshare.html">https://html5-demos.appspot.com/static/getusermedia/screenshare.html</a></small></p>
 				</section>
 
-				<section class="listing">
-					<h1>RTCPeerConnection</h1>
-					<hr>
-				</section>
-
 				<section>
-					<h1>getUserMedia</h1>
+					<h2>getUserMedia</h2>
 					<h2 class="red">❤</h2>
-					<h1>RTCPeerConnection</h1>
+					<h2>RTCPeerConnection</h2>
 				</section>
 
 				<section class="listing" data-transition="fade" data-background-transition="fade">
@@ -222,7 +211,7 @@ function gotAnswer(desc) {
 }
 
 function gotRemoteStream(e) {
-  attachMediaStream(remoteVideo, e.stream);
+  // attach e.stream to a video element as we did previously
 }
     				</code></pre>
     				<a href="/demos/peerconnection/">Demo</a>
@@ -230,7 +219,10 @@ function gotRemoteStream(e) {
 
 				<section class="listing">
 					<h1>RTCDataChannel</h1>
-					<hr>
+				</section>
+
+				<section>
+					<img src="http://tech.graze.com/content/images/2014/Apr/mind-blown.gif" alt="Mind blowing" class="no-shadow" width="50%">
 				</section>
 
 				<section class="listing">
@@ -372,7 +364,7 @@ a=rtpmap:111 opus/48000/2
 				<section class="listing">
 					<h3>TURN (Traversal Using Relays around NAT)</h3>
 					<ul>
-						<li>Provide a cloud fallback if peer-to-peer communication failss</li>
+						<li>Provide a cloud fallback if peer-to-peer communication fails</li>
 						<li>Data is sent through server, uses server bandwidth</li>
 						<li>Ensures the call works in almost all environments</li>
 					</ul>
